@@ -1,0 +1,6 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "RASPBERRY_PI_PICO")(type "KiCad")(uri "/Users/varunfloppa/Downloads/RASPBERRY_PI_PICO/RASPBERRY_PI_PICO.kicad_sym")(options "")(descr ""))
+  (lib (name "CherryMX")(type "KiCad")(uri "/Users/varunfloppa/Downloads/kicad-libraries-master/symbols/CherryMX.kicad_sym")(options "")(descr ""))
+  (lib (name "SK6812-E")(type "KiCad")(uri "/Users/varunfloppa/Downloads/SK6812-E/SK6812-E.kicad_sym")(options "")(descr ""))
+)
