@@ -67,6 +67,13 @@ def display_centered_text(oled, text):
     oled.text(text, x, y, 1)
     oled.show()
 
+# Setup to show device is powered on and ready
+for i in range(16):
+    pixels[i] = up_colors[switches[i]]
+    sleep(.1)
+
+display_centered_text(oled, "welcome")
+
 # Function to check and send keycodes 
 def check_and_send_keys():
     global previous_displayed_key
