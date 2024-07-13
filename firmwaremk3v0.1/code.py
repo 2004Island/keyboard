@@ -26,11 +26,6 @@ pixels = neopixel.NeoPixel(pixelpin, num_pixels)
 i2c = busio.I2C(board.GP1, board.GP0)
 oled = adafruit_ssd1306.SSD1306_I2C(128, 64, i2c)
 
-# Test the display
-oled.fill(0)
-oled.text("Hello World", 0, 0, 1)
-oled.show()
-
 # Initialize digital inputs for switches
 pins = [
     board.GP5, board.GP4, board.GP3, board.GP2,
@@ -60,7 +55,10 @@ for key in key_config['keys']:
 # Dictionary to keep track of key states
 key_states = {switch: False for switch in switches}
 
-# Function to center text on the OLED display
+# Variable to track the previously displayed key
+previous_displayed_key = None
+
+# Function to center text on the OLED display 
 def display_centered_text(oled, text):
     oled.fill(0)
     text_width = len(text) * 6  # Each character is approximately 6 pixels wide
@@ -69,20 +67,20 @@ def display_centered_text(oled, text):
     oled.text(text, x, y, 1)
     oled.show()
 
-# Function to check and send keycodes
+# Function to check and send keycodes 
 def check_and_send_keys():
+    global previous_displayed_key
+    new_key_pressed = None
     for switch in keycodes.keys():
         if not switch.value:  # Switch is pressed when value is False
             if not key_states[switch]:  # Only press keys if they are not already pressed
                 macro = keycodes[switch]
-                oled_text = oled_texts[switch]
-                if macro[0] == Keycode.SHIFT:
-                    kbd.press(Keycode.SHIFT)
-                if len(macro) > 1 and Keycode.SEMICOLON in macro:
+                #if Keycode.SHIFT in macro:
+                #    kbd.press(Keycode.SHIFT)
+                if Keycode.SEMICOLON in macro:
                     for keycode in macro:
                         if keycode != Keycode.SEMICOLON:
                             kbd.press(keycode)
-                    # Release the COMMAND key at the end
                     for keycode in macro:
                         if keycode != Keycode.SEMICOLON:
                             kbd.release(keycode)
@@ -93,20 +91,22 @@ def check_and_send_keys():
                         kbd.release(macro[i])
                     kbd.release(macro[0])
                 else:
-                    # Press and release each key for non-COMMAND macros
                     for keycode in macro:
                         kbd.press(keycode)
                         kbd.release(keycode)
                 pixels[switches.index(switch)] = down_colors[switch]
-                display_centered_text(oled, oled_text)
                 key_states[switch] = True
+                new_key_pressed = switch
         else:
             if key_states[switch]:  # Only release keys if they are currently pressed
                 pixels[switches.index(switch)] = up_colors[switch]
                 key_states[switch] = False
 
+    if new_key_pressed and new_key_pressed != previous_displayed_key:
+        display_centered_text(oled, oled_texts[new_key_pressed])
+        previous_displayed_key = new_key_pressed
+
 # Main loop
 while True:
     check_and_send_keys()
-    sleep(0.05)  # Reduce delay to make key press detection more responsive
-
+    sleep(0.01)  # Reduce delay to make key press detection more responsive

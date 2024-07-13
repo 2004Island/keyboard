@@ -1,0 +1,116 @@
+{
+  "keys": [
+    {
+      "key_number": 0,
+      "macro": ["Keycode.SHIFT", "Keycode.SEMICOLON", "Keycode.COMMAND", "Keycode.P"],
+      "up_color": [0, 0, 255],
+      "down_color": [255, 255, 255],
+      "oled": "private tab"
+    },
+    {
+      "key_number": 1,
+      "macro": ["Keycode.S", "Keycode.K", "Keycode.I", "Keycode.B", "Keycode.I", "Keycode.D", "Keycode.I", "Keycode.SPACE"],
+      "up_color": [0, 0, 255],
+      "down_color": [255, 255, 255],
+      "oled": "skibidi"
+    },
+    {
+      "key_number": 2,
+      "macro": ["Keycode.R", "Keycode.I", "Keycode.Z", "Keycode.Z", "Keycode.SPACE"],
+      "up_color": [0, 0, 255],
+      "down_color": [255, 255, 255],
+      "oled": "rizz"
+    },
+    {
+      "key_number": 3,
+      "macro": ["Keycode.V", "Keycode.R", "Keycode.O", "Keycode.SPACE"],
+      "up_color": [0, 0, 255],
+      "down_color": [255, 255, 255],
+      "oled": "vro"
+    },
+    {
+      "key_number": 4,
+      "macro": ["Keycode.SHIFT", "Keycode.SEMICOLON", "Keycode.COMMAND", "Keycode.SEMICOLON", "Keycode.THREE"],
+      "up_color": [255, 0, 50],
+      "down_color": [255, 255, 255],
+      "oled": "screenshot full"
+    },
+    {
+      "key_number": 5,
+      "macro": ["Keycode.COMMAND", "Keycode.SEMICOLON", "Keycode.R"],
+      "up_color": [255, 0, 50],
+      "down_color": [255, 255, 255],
+      "oled": "reload"
+    },
+    {
+      "key_number": 6,
+      "macro": ["Keycode.COMMAND", "Keycode.SEMICOLON", "Keycode.T"],
+      "up_color": [255, 0, 50],
+      "down_color": [255, 255, 255],
+      "oled": "new tab"
+    },
+    {
+      "key_number": 7,
+      "macro": ["Keycode.COMMAND", "Keycode.SEMICOLON", "Keycode.Y"],
+      "up_color": [255, 0, 50],
+      "down_color": [255, 255, 255],
+      "oled": "redo"
+    },
+    {
+      "key_number": 8,
+      "macro": ["Keycode.COMMAND", "Keycode.SEMICOLON", "Keycode.U"],
+      "up_color": [129, 30, 255],
+      "down_color": [255, 255, 255],
+      "oled": "underline"
+    },
+    {
+      "key_number": 9,
+      "macro": ["Keycode.COMMAND", "Keycode.SEMICOLON", "Keycode.I"],
+      "up_color": [128, 30, 255],
+      "down_color": [255, 255, 255],
+      "oled": "italic"
+    },
+    {
+      "key_number": 10,
+      "macro": ["Keycode.COMMAND", "Keycode.SEMICOLON", "Keycode.O"],
+      "up_color": [128, 30, 255],
+      "down_color": [255, 255, 255],
+      "oled": "open"
+    },
+    {
+      "key_number": 11,
+      "macro": ["Keycode.SHIFT", "Keycode.SEMICOLON", "Keycode.COMMAND", "Keycode.SEMICOLON", "Keycode.FOUR"],
+      "up_color": [128, 30, 255],
+      "down_color": [255, 255, 255],
+      "oled": "screenshot area"
+    },
+    {
+      "key_number": 12,
+      "macro": ["Keycode.COMMAND", "Keycode.SEMICOLON", "Keycode.A"],
+      "up_color": [255, 25, 10],
+      "down_color": [255, 255, 255],
+      "oled": "select all"
+    },
+    {
+      "key_number": 13,
+      "macro": ["Keycode.COMMAND", "Keycode.SEMICOLON", "Keycode.S"],
+      "up_color": [255, 25, 10],
+      "down_color": [255, 255, 255],
+      "oled": "save"
+    },
+    {
+      "key_number": 14,
+      "macro": ["Keycode.COMMAND", "Keycode.SEMICOLON", "Keycode.D"],
+      "up_color": [255, 25, 10],
+      "down_color": [255, 255, 255],
+      "oled": "duplicate"
+    },
+    {
+      "key_number": 15,
+      "macro": ["Keycode.COMMAND", "Keycode.SEMICOLON", "Keycode.F"],
+      "up_color": [255, 25, 10],
+      "down_color": [255, 255, 255],
+      "oled": "find"
+    }
+  ]
+}
